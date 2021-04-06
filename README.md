@@ -59,3 +59,5 @@ The square of the Mahalanobis distance to the centroid of the distribution shoul
 
 From the distribution above we can set the anomaly threshold equals to 4 standard deviations from mean of training data's Mahalanobis distances. Mahalanobis distance of the training data, threshold value and anomaly flag variable for both train and test data can be saved into a dataframe.
 
+![Screenshot 2021-04-06 at 15 43 39](https://user-images.githubusercontent.com/76395229/113720495-fca53380-96ee-11eb-8715-bd2627c5c658.png)
+
