@@ -82,4 +82,10 @@ By plotting the distribution of the calculated loss in the training set, one can
 
 From our result, we can use a threshold of 0.3 for flagging an anomaly. We can then calculate the loss in the test set, to check when the output crosses the anomaly threshold.
 
+![Screenshot 2021-04-06 at 16 05 24](https://user-images.githubusercontent.com/76395229/113723762-f6648680-96f1-11eb-8427-de790402045a.png)
+
+From the above loss distribution, a threshold of 0.3 is set for flagging an anomaly. We can then calculate the loss in the test set, to check when the output crosses the anomaly threshold.
+
+
+
 
