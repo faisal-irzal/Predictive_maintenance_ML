@@ -41,7 +41,7 @@ Before setting up the models, we need to define train/test data. To do this, we 
 
 ![Screenshot 2021-04-06 at 15 32 28](https://user-images.githubusercontent.com/76395229/113718990-7b00d600-96ed-11eb-99a4-cbf4790a8c6c.png)
 
-## 4. Approach-1 Multivariate Statistical Analysis (MSA)
+## 4. Approach-1: Multivariate Statistical Analysis (MSA)
 
 Having split the dataset into train and test data, we will now build a model that can detect anomaly from the bearing datasets. This section will be split into two subsection; first is building the model using PCA, second is anomaly detection using Mahalanobis distance.
 
@@ -68,7 +68,7 @@ From the distribution above we can set the anomaly threshold equals to 4 standar
 
 The chart above shows that anomaly can be detected between 2004-02-16 to 2004-02-17 without the risk of missing Bearing 1. That's practically 2 days before when the breakdown actually occurred, on 2004-02-19.
 
-## 5. Approach 2: Autoencoder model for anomaly detection
+## 5. Approach-2: Autoencoder model for anomaly detection
 
 An autoencoder is a type of artificial neural network used to learn efficient data encodings in an unsupervised manner. The aim of an autoencoder is to learn a representation (encoding) for a set of data, typically for dimensionality reduction. Along with the reduction side, a reconstructing side is learnt, where the autoencoder tries to generate from the reduced encoding a representation as close as possible to its original input.
 
