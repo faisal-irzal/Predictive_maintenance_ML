@@ -20,6 +20,7 @@ For the sake of understanding the introduced concept in the article, I have foll
 
 The bearing dataset was collected from bearing test rig conducted by the Center for Intelligent Maintenance Systems (IMS), University of Cincinnati and is available at [Kaggle](https://www.kaggle.com/vinayak123tyagi/bearing-dataset). The test setup is illustrated as per below graphic.
 
+![Screenshot 2021-04-06 at 16 11 41](https://user-images.githubusercontent.com/76395229/113725019-35dfa280-96f3-11eb-8854-173bc0f00c0d.png)
 
 There exists 3 datasets in total and each dataset consists of individual files that are 1-second vibration signal snapshots recorded at specific intervals. Following the article, the second dataset was selected to perform this study.
 
