@@ -30,9 +30,28 @@ Plotting the raw data with respect to its index (time of observation) we get the
 
 From the plot above we notice that Bearing 1 started to deviate from original trend after 2004-02-16 while others still performed quite normal until after 2004-02-18. In traditional Statistical Process Control (SPC), if we are unlucky, we may not have selected Bearing 1 to be monitored and may not have detected any issue before 2004-02-19, when a breakdown event occurred.
 
-## Define train/test data
+## 3. Define train/test data
 
 Before setting up the models, we need to define train/test data. To do this, we perform a simple split where we train on the first part of the dataset (which should represent normal operating conditions), and test on the remaining parts of the dataset leading up to the bearing failure. Plot below shows the train dataset we use to train the model.
 
 ![Screenshot 2021-04-06 at 15 32 28](https://user-images.githubusercontent.com/76395229/113718990-7b00d600-96ed-11eb-99a4-cbf4790a8c6c.png)
+
+## 4. Approach-1 Multivariate Statistical Analysis (MSA)
+
+Having split the dataset into train and test data, we will now build a model that can detect anomaly from the bearing datasets. This section will be split into two subsection; first is building the model using PCA, second is anomaly detection using Mahalanobis distance.
+
+### 4.1 Principal Component Analysis (PCA) application to the MSA
+
+Dealing with high dimensional data is often computationally challenging. Luckily there are several techniques to reduce the number of variables. One of the main techniques we are going to use here is the Principal Component Analysis (PCA). 
+
+Here, PCA performs a linear mapping of the data to a lower-dimensional space in such a way that the variance of the data in the low-dimensional representation is maximized. In practice, the covariance matrix of the data is constructed and the eigenvectors of this matrix are computed. The eigenvectors that correspond to the largest eigenvalues (the principal components) can now be used to reconstruct a large fraction of the variance of the original data. The original feature space has now been reduced to the space spanned by a few eigenvectors.
+
+PCA model has been built based on the training data and features have been reduced to 2 principal components. It is observed that the principal component 1 holds 51.0% of the information while the principal component 2 holds only 20.4% of the information. Also, the other point to note is that while projecting four-dimensional data to a two-dimensional data, 28.6% information was lost.
+
+
+### 4.2 Anomaly Detection using Mahalanobis distance
+
+The Mahalanobis distance is widely used in cluster analysis and classification techniques. In order to use the Mahalanobis distance to classify a test point as belonging to one of N classes, one first estimates the covariance matrix of each class, usually based on samples known to belong to each class. In our case, as we are only interested in classifying “normal” vs “anomaly”, we use training data that only contains normal operating conditions to calculate the covariance matrix. Then, given a test sample, we compute the Mahalanobis distance to the “normal” class, and classifies the test point as an “anomaly” if the distance is above a certain threshold. More about Mahalanobis distance, please follow this [link](https://www.machinelearningplus.com/statistics/mahalanobis-distance/).
+
+The square of the Mahalanobis distance to the centroid of the distribution should follow chi-square (χ2) distribution if the assumption of normal distributed input variables is fulfilled. This is also the assumption behind the above calculation of the “threshold value” for flagging an anomaly. As this assumption is not necessarily fulfilled in our case, it is beneficial to visualize the distribution of the Mahalanobis distance to set a good threshold value for flagging anomalies.
 
