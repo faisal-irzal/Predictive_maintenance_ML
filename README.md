@@ -73,4 +73,7 @@ In this case study, the distribution of the reconstruction loss of the autoencod
 
 The ELU (Exponential Linear Unit) activation function is used, which returns x if x > 0 and exp((x)-1) if x < 0). Such choice allows faster convergence of model weigths compared to RELU because of non-null output for x < 0. No difference was observed based on variation of the initialization of weights. This may mean that model training is complete after 100 iterations, and thus results are stable.
 
+![Screenshot 2021-04-06 at 16 03 02](https://user-images.githubusercontent.com/76395229/113723412-9ec61b00-96f1-11eb-93db-ba36e1b0af97.png)
+
+
 
