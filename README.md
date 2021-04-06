@@ -55,3 +55,7 @@ The Mahalanobis distance is widely used in cluster analysis and classification t
 
 The square of the Mahalanobis distance to the centroid of the distribution should follow chi-square (χ2) distribution if the assumption of normal distributed input variables is fulfilled. This is also the assumption behind the above calculation of the “threshold value” for flagging an anomaly. As this assumption is not necessarily fulfilled in our case, it is beneficial to visualize the distribution of the Mahalanobis distance to set a good threshold value for flagging anomalies.
 
+![Screenshot 2021-04-06 at 15 42 12](https://user-images.githubusercontent.com/76395229/113720249-bc45b580-96ee-11eb-8a17-cc3964ba66c1.png)
+
+From the distribution above we can set the anomaly threshold equals to 4 standard deviations from mean of training data's Mahalanobis distances. Mahalanobis distance of the training data, threshold value and anomaly flag variable for both train and test data can be saved into a dataframe.
+
