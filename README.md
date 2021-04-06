@@ -86,6 +86,13 @@ From our result, we can use a threshold of 0.3 for flagging an anomaly. We can t
 
 From the above loss distribution, a threshold of 0.3 is set for flagging an anomaly. We can then calculate the loss in the test set, to check when the output crosses the anomaly threshold.
 
+![Screenshot 2021-04-06 at 16 06 59](https://user-images.githubusercontent.com/76395229/113723959-290e7f00-96f2-11eb-8f0f-6fca6837d024.png)
+
+Similar to the PCA with Mahalanobis distance method, the chart above shows that the anomaly can be detected on 2004-02-16. One can see that it detects anomaly slightly earlier than the PCA with Mahalanobis distance model. This may due to the choice of the hyperparameter of the model and may also due to Autoencoder doesn't have the assumption that the input data follows Gaussian distribution, which is a constraint of Mahalanobis distance. This requires further investigation.
+
+## 6. Conclusions
+
+Two modelling methods have been discussed to analyze data collected from various measurements of the sensors as means of machine monitoring condition. Both methods showed similar results where they are able to predict the anomaly prior to the actual failure. The main difference between two approaches lays in the definition of a suitable threshold value for anomalies. Based on the results discussed above, the approach using autoencoder of neural network is slightly superior to the one using a combination of PCA and Mahalanobis distance. 
 
 
 
