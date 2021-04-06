@@ -34,3 +34,5 @@ From the plot above we notice that Bearing 1 started to deviate from original tr
 
 Before setting up the models, we need to define train/test data. To do this, we perform a simple split where we train on the first part of the dataset (which should represent normal operating conditions), and test on the remaining parts of the dataset leading up to the bearing failure. Plot below shows the train dataset we use to train the model.
 
+![Screenshot 2021-04-06 at 15 32 28](https://user-images.githubusercontent.com/76395229/113718990-7b00d600-96ed-11eb-99a4-cbf4790a8c6c.png)
+
