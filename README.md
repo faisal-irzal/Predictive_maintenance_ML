@@ -61,3 +61,4 @@ From the distribution above we can set the anomaly threshold equals to 4 standar
 
 ![Screenshot 2021-04-06 at 15 43 39](https://user-images.githubusercontent.com/76395229/113720495-fca53380-96ee-11eb-8715-bd2627c5c658.png)
 
+The chart above shows that anomaly can be detected between 2004-02-16 to 2004-02-17 without the risk of missing Bearing 1. That's practically 2 days before when the breakdown actually occurred, on 2004-02-19.
