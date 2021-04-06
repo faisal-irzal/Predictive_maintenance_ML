@@ -22,6 +22,7 @@ The bearing dataset was collected from bearing test rig conducted by the Center 
 
 ![Screenshot 2021-04-06 at 16 11 41](https://user-images.githubusercontent.com/76395229/113725019-35dfa280-96f3-11eb-8854-173bc0f00c0d.png)
 
+
 There exists 3 datasets in total and each dataset consists of individual files that are 1-second vibration signal snapshots recorded at specific intervals. Following the article, the second dataset was selected to perform this study.
 
 For the second dataset, there exists 984 data files with a measurement interval of 10 minutes between each two adjacent data file, and each data file has 20,480 measurements. This means a measurement exercise of the equipment was conducted every 10 minutes and in each exercise 20,480 measurements were taken.
