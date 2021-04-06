@@ -76,4 +76,10 @@ The ELU (Exponential Linear Unit) activation function is used, which returns x i
 ![Screenshot 2021-04-06 at 16 03 02](https://user-images.githubusercontent.com/76395229/113723412-9ec61b00-96f1-11eb-93db-ba36e1b0af97.png)
 
 
+### 5.2 Distribution of loss function in the training set
+
+By plotting the distribution of the calculated loss in the training set, one can use this to identify a suitable threshold value for identifying an anomaly. In doing this, one can make sure that this threshold is set above the “noise level”, and that any flagged anomalies should be statistically significant above the noise background.
+
+From our result, we can use a threshold of 0.3 for flagging an anomaly. We can then calculate the loss in the test set, to check when the output crosses the anomaly threshold.
+
 
