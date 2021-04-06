@@ -62,3 +62,15 @@ From the distribution above we can set the anomaly threshold equals to 4 standar
 ![Screenshot 2021-04-06 at 15 43 39](https://user-images.githubusercontent.com/76395229/113720495-fca53380-96ee-11eb-8715-bd2627c5c658.png)
 
 The chart above shows that anomaly can be detected between 2004-02-16 to 2004-02-17 without the risk of missing Bearing 1. That's practically 2 days before when the breakdown actually occurred, on 2004-02-19.
+
+## 5. Approach 2: Autoencoder model for anomaly detection
+
+An autoencoder is a type of artificial neural network used to learn efficient data encodings in an unsupervised manner. The aim of an autoencoder is to learn a representation (encoding) for a set of data, typically for dimensionality reduction. Along with the reduction side, a reconstructing side is learnt, where the autoencoder tries to generate from the reduced encoding a representation as close as possible to its original input.
+
+In this case study, the distribution of the reconstruction loss of the autoencoder for training data is plotted to identify where normally reconstruction loss lies and come up with a threshold as the upper control limit. One can also compute the 3 standard deviations from the mean of reconstruction loss to determine an appropriate upper control limit, similar to what have been done in the first modeling approach above.
+
+### 5.1 Define and train the model
+
+The ELU (Exponential Linear Unit) activation function is used, which returns x if x > 0 and exp((x)-1) if x < 0). Such choice allows faster convergence of model weigths compared to RELU because of non-null output for x < 0. No difference was observed based on variation of the initialization of weights. This may mean that model training is complete after 100 iterations, and thus results are stable.
+
+
