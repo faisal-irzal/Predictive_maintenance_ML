@@ -25,4 +25,5 @@ For the second dataset, there exists 984 data files with a measurement interval 
 For each measurement, there are 4 different parameters recorded, representing 4 different types of bearings of the equipment. This project is essentially studying the interactions between the 4 bearings. For each data file, Vegard Flovik took an average of all 20,480 measurements and the final dataset has 984 rows and 4 columns. I believe the purpose of taking the average is for simplicity and the reduction of noise among individual measurements. However, one can actually train a more sophisticated model by using the large number of individual measurements without taking the average.
 
 Plotting the raw data with respect to its index (time of observation) we get the following plot
+![Screenshot 2021-04-06 at 15 26 35](https://user-images.githubusercontent.com/76395229/113718341-d383a380-96ec-11eb-83dd-142a62a85100.png)
 
